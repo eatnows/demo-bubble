@@ -19,18 +19,13 @@ public class BubbleFrame extends JFrame {
     private void initObject() {
         backgroundMap = new JLabel(new ImageIcon("image/backgroundMap.png"));
         setContentPane(backgroundMap);
-//        backgroundMap.setSize(1000, 600);
-//        backgroundMap.setLocation(300, 300);
-
-//        add(backgroundMap); // JFrame에 JLabel이 그려진다.
-
         player = new Player();
         add(player);
     }
 
     private void initSetting() {
         setSize(1000, 640);
-        setLayout(null); // absoulte 레이아웃 (자유롭게 그림을 그릴 수 있다.)
+        setLayout(null); // absolute 레이아웃 (자유롭게 그림을 그릴 수 있다.)
         setLocationRelativeTo(null); // JFrame 가운데 배치하기
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // x버튼으로 창을 끌 때 JVM 같이 종료허기
     }
@@ -42,11 +37,13 @@ public class BubbleFrame extends JFrame {
 
                 switch (e.getKeyCode()) {
                     case KeyEvent.VK_LEFT:
-                        if (!player.isLeft()) player.left();
+                        if (!player.isLeft() && !player.isLeftWallCrash()) {
+                            player.left();
+                        }
 
                         break;
                     case KeyEvent.VK_RIGHT:
-                        if (!player.isRight()) {
+                        if (!player.isRight() && !player.isRightWallCrash()) {
                             player.right();
                         }
                         break;
@@ -56,8 +53,6 @@ public class BubbleFrame extends JFrame {
                         }
                         break;
                 }
-
-
             }
 
             // 키를 뗄때 상태값을 false로 변경
