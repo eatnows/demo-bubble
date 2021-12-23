@@ -52,6 +52,10 @@ public class BubbleFrame extends JFrame {
                             player.up();
                         }
                         break;
+                    case KeyEvent.VK_SPACE:
+                        Bubble bubble = new Bubble(player);
+                        add(bubble);
+                        break;
                 }
             }
 
