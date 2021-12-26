@@ -1,11 +1,17 @@
 package test.ex05;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.swing.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+@Getter
+@Setter
 public class BubbleFrame extends JFrame {
 
+    private BubbleFrame mContext = this;
     private JLabel backgroundMap;
     private Player player;
 
@@ -53,7 +59,7 @@ public class BubbleFrame extends JFrame {
                         }
                         break;
                     case KeyEvent.VK_SPACE:
-                        Bubble bubble = new Bubble(player);
+                        Bubble bubble = new Bubble(mContext);
                         add(bubble);
                         break;
                 }
