@@ -10,5 +10,9 @@ public interface Moveable {
     void right();
     void up();
 
-    default void down() {};
+    default void down() {}
+    default void attack() {
+
+    }
+
 }
