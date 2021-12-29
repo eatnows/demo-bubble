@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24578750-4732-4360-89e6-4cac7a931540" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/ex05/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/ex05/EnemyDirection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ex05/BubbleFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/BubbleFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bubble/test/ex05/Bubble.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/test/ex05/Bubble.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bubble/test/ex05/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/test/ex05/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ex05/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/Bubble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ex05/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/Enemy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +160,7 @@
       <workItem from="1640004617452" duration="4856000" />
       <workItem from="1640267685898" duration="4099000" />
       <workItem from="1640404447759" duration="6190000" />
-      <workItem from="1640704509502" duration="707000" />
+      <workItem from="1640704509502" duration="5610000" />
     </task>
     <servers />
   </component>
