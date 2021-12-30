@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
 
 // class Player -> new 가능, 게임에 존재할 수 있음. (추상메서드를 가질 수 없다,)
@@ -12,6 +13,7 @@ import java.util.List;
 public class Player extends JLabel implements Moveable {
 
     private BubbleFrame mContext;
+    private List<Bubble> bubbles;
 
     // 위치 상태
     private int x;
@@ -46,6 +48,7 @@ public class Player extends JLabel implements Moveable {
     private void initObject() {
         playerR = new ImageIcon("image/playerR.png");
         playerL = new ImageIcon("image/playerL.png");
+        bubbles = new ArrayList<>();
     }
 
     private void initSetting() {
@@ -75,6 +78,7 @@ public class Player extends JLabel implements Moveable {
         new Thread(() -> {
             Bubble bubble = new Bubble(mContext);
             mContext.add(bubble);
+            bubbles.add(bubble);
             if (playerDirection == PlayerDirection.LEFT) {
                 bubble.left();
             } else {

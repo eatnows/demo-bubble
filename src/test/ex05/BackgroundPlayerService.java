@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 // 메인스레드는 바쁨 - 키보드 이벤트를 처리하기 바쁨
 // 백그라운드에서 계속 관찰
@@ -12,9 +13,12 @@ public class BackgroundPlayerService implements Runnable{
 
     private BufferedImage image;
     private Player player;
+    private List<Bubble> bubbles;
 
+    // 플레이어, 버블
     public BackgroundPlayerService(Player player) {
-        this.player = player; // composition
+        this.player = player;
+        this.bubbles = player.getBubbles();
         try {
             image = ImageIO.read(new File("image/backgroundMapService.png"));
         } catch (IOException e) {
@@ -25,6 +29,22 @@ public class BackgroundPlayerService implements Runnable{
     @Override
     public void run() {
         while (true) {
+
+            // 1. 버블 충돌 체크
+            for (int i = 0; i < bubbles.size(); i++) {
+                Bubble bubble = bubbles.get(i);
+                if (bubble.getState() == 1) {
+                    if ((Math.abs(player.getX() - bubble.getX()) < 10)
+                            && (Math.abs(player.getY() - bubble.getY()) > 0 && Math.abs(player.getY() - bubble.getY()) < 50)) {
+                        System.out.println("적군 사살 완료");
+                        bubble.clearBubbled();
+                        break;
+                    }
+                }
+            }
+
+            // 2. 벽 충돌 체크
+
             // 색상 확인
             Color leftColor = new Color(image.getRGB(player.getX() - 10, player.getY() + 25));
             Color rightColor = new Color(image.getRGB(player.getX() + 50 + 10, player.getY() + 25));
@@ -65,6 +85,5 @@ public class BackgroundPlayerService implements Runnable{
                 e.printStackTrace();
             }
         }
-
     }
 }

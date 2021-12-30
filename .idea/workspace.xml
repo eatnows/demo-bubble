@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24578750-4732-4360-89e6-4cac7a931540" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/ex05/BGM.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ex05/BubbleFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/BubbleFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bubble/test/ex05/BackgroundPlayerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/test/ex05/BackgroundPlayerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bubble/test/ex05/Bubble.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/test/ex05/Bubble.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bubble/test/ex05/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/test/ex05/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ex05/BackgroundPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/BackgroundPlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ex05/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/Bubble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ex05/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="test" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -158,7 +167,9 @@
       <workItem from="1640004617452" duration="4856000" />
       <workItem from="1640267685898" duration="4099000" />
       <workItem from="1640404447759" duration="6190000" />
-      <workItem from="1640704509502" duration="6057000" />
+      <workItem from="1640704509502" duration="9157000" />
+      <workItem from="1640854069352" duration="610000" />
+      <workItem from="1640858078048" duration="1199000" />
     </task>
     <servers />
   </component>
