@@ -1,4 +1,8 @@
-package test.ex05;
+package game.service;
+
+
+import game.component.Bubble;
+import game.component.Player;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

@@ -2,13 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24578750-4732-4360-89e6-4cac7a931540" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/game/BubbleFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/Moveable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/component/Bubble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/component/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/component/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/music/BGM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/service/BackgroundBubbleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/service/BackgroundEnemyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/service/BackgroundPlayerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/state/EnemyDirection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/game/state/PlayerDirection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/ex05/BackgroundEnemyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/bubble/test/ex05/BackgroundPlayerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/test/ex05/BackgroundPlayerService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/bubble/test/ex05/Bubble.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/test/ex05/Bubble.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bubble/test/ex05/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/test/ex05/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bubble/test/ex05/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/test/ex05/Enemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/ex05/BackgroundPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/BackgroundPlayerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/ex05/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/Bubble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ex05/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ex05/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/Enemy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +65,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/ex05" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/game" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -62,10 +74,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/game" />
+      <recent name="$PROJECT_DIR$/src/game/state" />
+      <recent name="$PROJECT_DIR$/src/game/component" />
+      <recent name="$PROJECT_DIR$/src/game/service" />
       <recent name="$PROJECT_DIR$/src/test/ex05" />
-      <recent name="$PROJECT_DIR$/src/test/ex04" />
-      <recent name="$PROJECT_DIR$/src/test" />
-      <recent name="$PROJECT_DIR$/src/test/ex03" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -73,10 +86,11 @@
       <recent name="$PROJECT_DIR$/image" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="game.music" />
       <recent name="test.ex05" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BubbleFrame (4)">
+  <component name="RunManager" selected="Application.BubbleFrame (5)">
     <configuration name="BubbleFrame (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.ex02.BubbleFrame" />
       <module name="bubble" />
@@ -129,12 +143,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BubbleFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.ex01.BubbleFrame" />
+    <configuration name="BubbleFrame (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="game.BubbleFrame" />
       <module name="bubble" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.ex01.*" />
+          <option name="PATTERN" value="game.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BubbleFrame (5)" />
         <item itemvalue="Application.BubbleFrame (4)" />
         <item itemvalue="Application.BubbleFrame (3)" />
         <item itemvalue="Application.BubbleFrame (2)" />
         <item itemvalue="Application.BubbleFrame (1)" />
-        <item itemvalue="Application.BubbleFrame" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +183,7 @@
       <workItem from="1640404447759" duration="6190000" />
       <workItem from="1640704509502" duration="9157000" />
       <workItem from="1640854069352" duration="610000" />
-      <workItem from="1640858078048" duration="1199000" />
+      <workItem from="1640858078048" duration="2895000" />
     </task>
     <servers />
   </component>

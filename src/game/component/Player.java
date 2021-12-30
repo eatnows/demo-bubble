@@ -1,23 +1,30 @@
-package test.ex05;
+package game.component;
 
+import game.BubbleFrame;
+import game.Moveable;
+import game.service.BackgroundPlayerService;
+import game.state.PlayerDirection;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
 // class Player -> new 가능, 게임에 존재할 수 있음. (추상메서드를 가질 수 없다,)
 @Getter
 @Setter
-public class Enemy extends JLabel implements Moveable {
+public class Player extends JLabel implements Moveable {
 
     private BubbleFrame mContext;
+    private List<Bubble> bubbles;
 
     // 위치 상태
     private int x;
     private int y;
 
-    // 적군의 방향
-    private EnemyDirection enemyDirection;
+    // 플레이어의 방향
+    private PlayerDirection playerDirection;
 
     // 움직임 상태
     private boolean left;
@@ -25,58 +32,75 @@ public class Enemy extends JLabel implements Moveable {
     private boolean up;
     private boolean down;
 
-    private int state; // 0(살아있는 상태), 1(물방울에 갇힌 상태)
+    // 벽에 충돌한 상태
+    private boolean leftWallCrash;
+    private boolean rightWallCrash;
 
-    // 적군 속도 상태
-    private final int SPEED = 3;
-    private final int JUMPSPEED = 1;
+    // 플레이어 속도 상태
+    private final int SPEED = 4;
+    private final int JUMPSPEED = 2;
 
-    private ImageIcon enemyR, enemyL;
+    private ImageIcon playerR, playerL;
 
-    public Enemy(BubbleFrame mContext) {
+    public Player(BubbleFrame mContext) {
         this.mContext = mContext;
         initObject();
         initSetting();
-        initBackgroundEnemyService();
-        right();
+        initBackgroundPlayerService();
     }
 
     private void initObject() {
-        enemyR = new ImageIcon("image/enemyR.png");
-        enemyL = new ImageIcon("image/enemyL.png");
+        playerR = new ImageIcon("image/playerR.png");
+        playerL = new ImageIcon("image/playerL.png");
+        bubbles = new ArrayList<>();
     }
 
     private void initSetting() {
-        x = 480;
-        y = 178;
+        x = 80;
+        y = 535;
 
         left = false;
         right = false;
         up = false;
         down = false;
 
-        state = 0;
+        leftWallCrash = false;
+        rightWallCrash = false;
 
-        enemyDirection = EnemyDirection.RIGHT;
-
-        setIcon(enemyR);
+        playerDirection = PlayerDirection.RIGHT;
+        this.setIcon(playerR);
         setSize(50, 50);
         setLocation(x, y);
     }
 
-    private void initBackgroundEnemyService() {
-        new Thread(new BackgroundEnemyService(this)).start();
+    private void initBackgroundPlayerService() {
+        new Thread(new BackgroundPlayerService(this)).start();
+    }
+
+    @Override
+    public void attack() {
+        new Thread(() -> {
+            Bubble bubble = new Bubble(mContext);
+            mContext.add(bubble);
+            bubbles.add(bubble);
+            if (playerDirection == PlayerDirection.LEFT) {
+                bubble.left();
+            } else {
+                bubble.right();
+            }
+        }).start();
     }
 
     // 이벤트 핸들러
     @Override
     public void left() {
-        enemyDirection = EnemyDirection.LEFT;
+        System.out.println("left");
+        playerDirection = PlayerDirection.LEFT;
 
         left = true;
         new Thread(() -> {
             while (left) {
-                setIcon(enemyL);
+                setIcon(playerL);
                 x -= SPEED;
                 setLocation(x, y);
                 try {
@@ -90,12 +114,13 @@ public class Enemy extends JLabel implements Moveable {
 
     @Override
     public void right() {
-        enemyDirection = EnemyDirection.RIGHT;
+        playerDirection = PlayerDirection.RIGHT;
 
+        System.out.println("right");
         right = true;
         new Thread(() -> {
             while (right) {
-                setIcon(enemyR);
+                setIcon(playerR);
                 x += SPEED;
                 setLocation(x, y);
                 try {
@@ -107,6 +132,7 @@ public class Enemy extends JLabel implements Moveable {
         }).start();
     }
 
+    // left + up, right + up
     @Override
     public void up() {
         up = true;
@@ -129,6 +155,7 @@ public class Enemy extends JLabel implements Moveable {
 
     @Override
     public void down() {
+        System.out.println("down");
         down = true;
         new Thread(()-> {
             while (down) {

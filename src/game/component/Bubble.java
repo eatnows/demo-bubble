@@ -1,5 +1,8 @@
-package test.ex05;
+package game.component;
 
+import game.BubbleFrame;
+import game.Moveable;
+import game.service.BackgroundBubbleService;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,7 +10,7 @@ import javax.swing.*;
 
 @Getter
 @Setter
-public class Bubble extends JLabel implements Moveable{
+public class Bubble extends JLabel implements Moveable {
 
     // 의존성 컴포지션
     private BubbleFrame mContext;

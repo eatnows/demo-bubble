@@ -1,5 +1,9 @@
-package test.ex05;
+package game.component;
 
+import game.BubbleFrame;
+import game.Moveable;
+import game.service.BackgroundEnemyService;
+import game.state.EnemyDirection;
 import lombok.Getter;
 import lombok.Setter;
 
