@@ -2,25 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24578750-4732-4360-89e6-4cac7a931540" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/game/BubbleFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Moveable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/component/Bubble.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/component/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/component/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/music/BGM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/service/BackgroundBubbleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/service/BackgroundEnemyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/service/BackgroundPlayerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/state/EnemyDirection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/state/PlayerDirection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/ex05/BackgroundEnemyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/playerLDie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/playerRDie.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bubble/test/ex05/BackgroundPlayerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/test/ex05/BackgroundPlayerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bubble/test/ex05/Bubble.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/test/ex05/Bubble.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/bubble/test/ex05/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/test/ex05/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ex05/BackgroundPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/BackgroundPlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ex05/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/Bubble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ex05/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/ex05/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bubble/game/BubbleFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/game/BubbleFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bubble/game/BubbleFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/game/BubbleFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bubble/game/Moveable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/game/Moveable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bubble/game/component/Bubble.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/game/component/Bubble.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bubble/game/component/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/game/component/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bubble/game/component/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/game/component/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bubble/game/service/BackgroundPlayerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/bubble/game/service/BackgroundPlayerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/BubbleFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/BubbleFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Moveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Moveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/component/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/component/Bubble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/component/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/component/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/component/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/component/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/service/BackgroundPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/service/BackgroundPlayerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/game" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/image" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -74,11 +71,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/image" />
       <recent name="$PROJECT_DIR$/src/game" />
       <recent name="$PROJECT_DIR$/src/game/state" />
       <recent name="$PROJECT_DIR$/src/game/component" />
       <recent name="$PROJECT_DIR$/src/game/service" />
-      <recent name="$PROJECT_DIR$/src/test/ex05" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -183,7 +180,8 @@
       <workItem from="1640404447759" duration="6190000" />
       <workItem from="1640704509502" duration="9157000" />
       <workItem from="1640854069352" duration="610000" />
-      <workItem from="1640858078048" duration="2895000" />
+      <workItem from="1640858078048" duration="4207000" />
+      <workItem from="1641045208138" duration="3179000" />
     </task>
     <servers />
   </component>

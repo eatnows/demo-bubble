@@ -32,7 +32,7 @@ public class BackgroundPlayerService implements Runnable{
 
     @Override
     public void run() {
-        while (true) {
+        while (!player.isDie()) {
 
             // 1. 버블 충돌 체크
             for (int i = 0; i < bubbles.size(); i++) {

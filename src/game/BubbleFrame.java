@@ -3,12 +3,16 @@ package game;
 import game.component.Enemy;
 import game.component.Player;
 import game.music.BGM;
+import game.state.EnemyDirection;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.swing.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @Getter
 @Setter
@@ -17,7 +21,7 @@ public class BubbleFrame extends JFrame {
     private BubbleFrame mContext = this;
     private JLabel backgroundMap;
     private Player player;
-    private Enemy enemy;
+    private List<Enemy> enemys;
 
     public BubbleFrame() {
         initObject();
@@ -31,9 +35,12 @@ public class BubbleFrame extends JFrame {
         setContentPane(backgroundMap);
         player = new Player(this);
         add(player);
-        enemy = new Enemy(this);
-        add(enemy);
-
+        enemys = new ArrayList<>();
+        enemys.add(new Enemy(mContext, EnemyDirection.RIGHT));
+        enemys.add(new Enemy(mContext, EnemyDirection.LEFT));
+        for (Enemy enemy : enemys) {
+            add(enemy);
+        }
         new BGM();
     }
 
