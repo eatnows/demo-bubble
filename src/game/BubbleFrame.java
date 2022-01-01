@@ -58,23 +58,24 @@ public class BubbleFrame extends JFrame {
 
                 switch (e.getKeyCode()) {
                     case KeyEvent.VK_LEFT:
-                        if (!player.isLeft() && !player.isLeftWallCrash()) {
+                        if (!player.isLeft() && !player.isLeftWallCrash() && !player.isDie()) {
                             player.left();
                         }
 
                         break;
                     case KeyEvent.VK_RIGHT:
-                        if (!player.isRight() && !player.isRightWallCrash()) {
+                        if (!player.isRight() && !player.isRightWallCrash() && !player.isDie()) {
                             player.right();
                         }
                         break;
                     case KeyEvent.VK_UP:
-                        if (!player.isUp() && !player.isDown()) {
+                        if (!player.isUp() && !player.isDown() && !player.isDie()) {
                             player.up();
                         }
                         break;
                     case KeyEvent.VK_SPACE:
-                        player.attack();
+                        if (!player.isDie())
+                            player.attack();
                         break;
                 }
             }

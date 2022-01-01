@@ -85,7 +85,7 @@ public class Bubble extends JLabel implements Moveable {
                         && (Math.abs(y - enemy.getY()) > 0 && Math.abs(y - enemy.getY()) < 50)) {
                     System.out.println("물방울이 적군과 충돌하였습니다.");
                     if (enemy.getState() == 0) {
-                        attack();
+                        attack(enemy);
                         break;
                     }
                 }
@@ -117,7 +117,7 @@ public class Bubble extends JLabel implements Moveable {
                         && (Math.abs(y - enemy.getY()) > 0 && Math.abs(y - enemy.getY()) < 50)) {
                     System.out.println("물방울이 적군과 충돌하였습니다.");
                     if (enemy.getState() == 0) {
-                        attack();
+                        attack(enemy);
                         break;
                     }
                 }
